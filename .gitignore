@@ -1,0 +1,25 @@
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# Test, lint, and type-check caches
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+
+# Secrets and local environment (keep .env.example committable)
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
