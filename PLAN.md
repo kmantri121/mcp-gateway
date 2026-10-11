@@ -24,7 +24,11 @@ A gateway that sits between AI agents and the MCP servers they use, so every too
 ## Week 1: gateway core
 
 - [ ] Setup: public repo with MIT license, `.env` in `.gitignore`, secret scanning with push protection, MCP SDK pinned to one version
+  - [x] MIT license, `.env` in `.gitignore`, `mcp==2.3.0` pinned (5 Oct)
+  - [ ] Repo public, secret scanning with push protection turned on
 - [ ] Two upstream MCP servers in Docker: a small notes server (add and search tools) written for this project, and one open-source reference server
+  - [x] Notes server (`add_note`, `search_notes`) in Docker, tested with MCP Inspector (5 Oct)
+  - [ ] Open-source reference server
 - [ ] The gateway: agents connect over Streamable HTTP; the gateway connects to both upstreams, merges their tool lists with a prefix per server (`notes.search`), and routes each tool call to the right upstream
 - [ ] PostgreSQL schema for agents, API keys (hashes only), upstream servers, policies, and the audit log, managed with versioned SQL migration files
 - [ ] Docker Compose starts everything with one command; tested with MCP Inspector
